@@ -19,6 +19,7 @@ const Component02 = () => {
             <span style={{padding:'0px 10px', color:'red', fontSize:'20px'}}>{count}</span>
             {/* style을 css 파일 말고 파일 내에서 직접 주고 싶다면 style 을 이용해서 가능 대신 {{}} 중괄호 두번 써야함 */}
             <button onClick={onIncrease}>증가</button>
+            <hr></hr>
         </div> 
     ) // return 내부는 jsx 문법임 
 }

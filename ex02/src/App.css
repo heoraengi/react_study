@@ -5,3 +5,16 @@
 button{
   color:blue;
 }
+
+input{
+  width: 100%;
+  margin : 5px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding : 5px;
+}
+
+.address{
+  width: 300px;
+  margin : 0px auto;
+}
