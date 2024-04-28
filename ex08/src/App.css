@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.button {
+  text-align: center;
+}
+
+* {
+  font-family: 'Jua' , sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ellipsis {  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 3;  
+  -webkit-box-orient: vertical;
+}
+
+.span {
+  color : gray;
+}
