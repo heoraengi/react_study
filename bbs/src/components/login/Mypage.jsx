@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {Row, Col, Card, Button, InputGroup, Form} from 'react-bootstrap';
 import { app } from '../../firebaseinit';
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
+import ModalAddress from './ModalAddress';
+import ModalPhoto from './ModalPhoto';
 
 const Mypage = () => {
     const db = getFirestore(app);
@@ -60,6 +62,9 @@ const Mypage = () => {
                         <h3 className='text-center'>마이페이지</h3>
                     </Card.Header>
                     <Card.Body>
+                        <div>
+                            <ModalPhoto setLoading={setLoading} form={form} setForm={setForm}/>
+                        </div>
                         <form onSubmit={onSubmit}>
                             <InputGroup className='mb-2'>
                                 <InputGroup.Text>이름</InputGroup.Text>
@@ -72,7 +77,7 @@ const Mypage = () => {
                             <InputGroup className='mb-1'>
                                 <InputGroup.Text>주소</InputGroup.Text>
                                 <Form.Control name="address1" value={address1} onChange={onChangeForm}/>
-                                <Button>검색</Button>
+                                <ModalAddress form={form} setForm={setForm}/>
                             </InputGroup>
                             <Form.Control placeholder='상세주소' name="address2" value={address2} onChange={onChangeForm}/>
                             <div className='text-center mt-3'>
